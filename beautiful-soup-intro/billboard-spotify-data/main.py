@@ -12,6 +12,7 @@ to Billboard Music at that specific date.
 # set up Client_ID and Client_Secret using config
 CLIENT_ID = config('CLIENT_ID')
 CLIENT_SECRET = config('CLIENT_SECRET')
+# set up spotify authentication to get spotify token (access code)
 sp = spotipy.Spotify(
     auth_manager=SpotifyOAuth(
         scope="playlist-modify-public",
