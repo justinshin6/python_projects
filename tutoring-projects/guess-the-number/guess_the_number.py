@@ -17,6 +17,7 @@ def regular_guess_the_number():
             user_input = int(input("Please put in a number from 1-100 "))
     print("That's right")
 
+regular_guess_the_number()
 
 def advanced_guess_the_number():
     """
@@ -98,4 +99,10 @@ def advanced_guess_the_number():
 
 
 # Function Calls
-advanced_guess_the_number()    
+# advanced_guess_the_number()
+
+
+
+
+
+
