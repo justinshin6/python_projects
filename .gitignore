@@ -41,3 +41,4 @@ yarn-error.log*
 # tokens
 beautiful-soup-intro/billboard-spotify-data/token.txt
 .idea
+__pycache__
