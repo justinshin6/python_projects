@@ -133,3 +133,10 @@ Objective: Given an array of high_scores, use a loop to print out the highest sc
 Answer: You should print out 339 as the final answer.
 high_scores = [87, 25, 339, 57, 17, 99, 100, 1, 3, 56, 37, 87]
 """
+
+high_scores = [87, 25, 3, 57, 17, 99, 100, 1, 3, 56, 37, 87]
+high_score = 0
+for i in high_scores:
+    if i > high_score:
+        high_score = i
+
