@@ -28,7 +28,7 @@ def get_name():
     return "Justin"
 - This is a simple function that returns my name. 
 """
-print("Hello World")
+
 """
 Definition vs Declaration: 
 - Whenever we make a function, that doesn't meant that the function will be run. When we make a function,
@@ -100,3 +100,21 @@ Steps:
 3.) Once the user types in a command, ask for two numbers, and then perform the operation 
 4.) If the user doesn't type a correct command, say that the input is invalid and to try again. 
 """
+
+# def get_name(parameter):
+#     return parameter
+#
+# name1 = get_name("Lucy")
+# name2 = get_name("Justin")
+# print(name1) # Lucy
+# print(name2) # Justin
+
+def add(num1, num2):
+    return num1 + num2
+
+num1 = add(3, 4)
+"""
+F-Strings
+"""
+name = 394875394759034750374503740
+print(f"My name is {name}.")
