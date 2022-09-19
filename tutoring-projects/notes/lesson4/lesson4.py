@@ -35,6 +35,29 @@ Dictionary Exercises:
 """
 
 """
-Accessing Keys inside of the dictionary: 
+Accessing Values inside of the dictionary: 
+- The way to access values inside of a dictionary is the following: Once again, if we had the following dictionary, 
+justin_info = {
+    "name": "Justin",
+    "age": 19,
+    "goodDay": True,
+    "HairColor": "Black"
+}
+, then how would we access "Justin" for example? 
+- The way this works is that you will just do print(justin_info["name"]). 
+- You put the key whose value that you want to access in square brackets right next to name of the dictionary. 
+Dictionary Exercises: 
+1.) Using justin_info, what will be printed out in the following? 
+print(justin_info["HairColor"])
+2.) Using justin_info, what will be printed out in the following? 
+print(justin_info["key"])
+- Hint: This is similar to when we are trying to access an array index that is not possible. 
 """
+
+"""
+KeyError: Whenever we are trying to access a value of a key that doesn't exist, a KeyError shows up which tells us that 
+they key that we are trying to access does not exist. 
+"""
+
+
 
