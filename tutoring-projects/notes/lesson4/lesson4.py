@@ -60,4 +60,23 @@ they key that we are trying to access does not exist.
 """
 
 
+"""
+Coding Exercise: Coin Change
+- Objective: Use inputs to take in the number of pennies, nickels, dimes, and quarters. After taking in these inputs, 
+use a Python dictionary to output the number of coins -> counts. For example, if I have 5 pennies, then I want to 
+output "pennies": 5. 
+- Additional Challenge: Then, I want you to create a function that returns the total dollar amount that you have with
+the amount of coins that you have rounded to two decimal places. 
+"""
+
+"""
+Coding Exercise: Blind Auction
+- Objective: Use inputs to take in a name and a certain bid amount for that person. After taking in these names, whenever
+the blind auction is over, return the name with the highest bid amount using a Python dictionary to store a person's 
+name to their bid amount. 
+- Additional Challenge: Make sure that there are no duplicate names by using an if statement to check to see if a name
+is already inside of a dictionary. 
+"""
+
+
 
