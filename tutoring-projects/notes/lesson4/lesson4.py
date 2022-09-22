@@ -76,7 +76,15 @@ the blind auction is over, return the name with the highest bid amount using a P
 name to their bid amount. 
 - Additional Challenge: Make sure that there are no duplicate names by using an if statement to check to see if a name
 is already inside of a dictionary. 
+- Hint 1: use a dictionary to store names -> bid amounts 
+- Hint 2: You will probably need a function that takes in a dictionary as a parameter that returns the name of the 
+highest bidder out of the key-value pairs inside of the dictionary. 
 """
 
+"""
+Reflection: All in all, Python dictionaries are another form of data structure that allows us to store elements 
+in key-value pairs. It is very useful because we are able to establish relationships between our variables. Therefore, 
+the two main data structures that we know now are dictionaries and arrays. 
+"""
 
 
