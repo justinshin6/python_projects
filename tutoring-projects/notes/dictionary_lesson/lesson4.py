@@ -86,5 +86,3 @@ Reflection: All in all, Python dictionaries are another form of data structure t
 in key-value pairs. It is very useful because we are able to establish relationships between our variables. Therefore, 
 the two main data structures that we know now are dictionaries and arrays. 
 """
-
-
