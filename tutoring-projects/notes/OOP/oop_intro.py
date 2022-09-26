@@ -27,5 +27,6 @@ and functions.
 """
 
 """
-Python is one of the main programming languages that implements these OOP principles.
+Python is one of the main programming languages that implements these OOP principles. Let's look at an example of 
+OOP programming in action. 
 """

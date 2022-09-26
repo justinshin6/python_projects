@@ -20,6 +20,8 @@ justin_info = {
 }
 """
 
+
+
 """
 The information above is called a Python Dictionary which is the second type of data structure that we will learn. 
 - Definition: A python dictionary is a data structure used to store data values in something called key:value pairs. 
@@ -54,11 +56,11 @@ print(justin_info["key"])
 - Hint: This is similar to when we are trying to access an array index that is not possible. 
 """
 
+
 """
 KeyError: Whenever we are trying to access a value of a key that doesn't exist, a KeyError shows up which tells us that 
 they key that we are trying to access does not exist. 
 """
-
 
 """
 Coding Exercise: Coin Change
