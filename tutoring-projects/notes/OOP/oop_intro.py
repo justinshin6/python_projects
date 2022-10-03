@@ -30,3 +30,10 @@ and functions.
 Python is one of the main programming languages that implements these OOP principles. Let's look at an example of 
 OOP programming in action. 
 """
+
+"""
+Now, after seeing OOP programming in action, let's try to make our own class using an example of your choice. If you 
+can't think of an example, you could make an example Car class with make and color attributes. 
+Car Exercises: 
+1.) Create a function called increase_speed() that takes in a parameter that increases the speed by that amount 
+"""
