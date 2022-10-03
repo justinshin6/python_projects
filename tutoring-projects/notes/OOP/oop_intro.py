@@ -36,4 +36,11 @@ Now, after seeing OOP programming in action, let's try to make our own class usi
 can't think of an example, you could make an example Car class with make and color attributes. 
 Car Exercises: 
 1.) Create a function called increase_speed() that takes in a parameter that increases the speed by that amount 
+2.) Create a function called compare_speed() that takes in a Car as a parameter and checks to see if a car's speed is 
+greater than, less than, or equal to the current car. 
+"""
+
+"""
+OOP CAPSTONE CHALLENGE: Coffee Maker
+- For this capstone challenge, we are going to make a coffee maker 
 """
