@@ -2,7 +2,7 @@
 Overview: For this project, we are making a quiz game where you are given a list of ten true-false questions. If
 the user correctly answers a question, the score goes up by one and the user moves onto the next question. If they
 miss the question, then they don't get a point. The game ends when there are no more questions left and the final
-score is outputted to the user.
+score is then outputted to the user.
 """
 """
 Step 1: Creating the Question Model Class 
