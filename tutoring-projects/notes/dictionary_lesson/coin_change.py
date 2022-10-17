@@ -8,7 +8,6 @@ coins = {
     "nickels": nickels,
     "dimes": dimes,
     "quarters": quarters,
-
 }
 
 def calculate_total():

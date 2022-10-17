@@ -20,8 +20,6 @@ justin_info = {
 }
 """
 
-
-
 """
 The information above is called a Python Dictionary which is the second type of data structure that we will learn. 
 - Definition: A python dictionary is a data structure used to store data values in something called key:value pairs. 
@@ -88,3 +86,4 @@ Reflection: All in all, Python dictionaries are another form of data structure t
 in key-value pairs. It is very useful because we are able to establish relationships between our variables. Therefore, 
 the two main data structures that we know now are dictionaries and arrays. 
 """
+

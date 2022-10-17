@@ -12,7 +12,7 @@ functionality that you need in one file, but this will lead to disorganized code
 let's say that we use OOP. We can have one class for the petals, one class for the stem of the flower, and one class 
 for the middle part of the flower. This allows us to organize our code in objects rather than in one file.  
 """
-
+# Lavender
 """
 Parts of Object-Oriented Programming: 
 1.) Classes - classes are the most high-level concept in OOP where it is the blueprint for specific objects, attributes, 
@@ -24,7 +24,9 @@ and functions.
 - Ex: Inside of our Car() class, we could have a drive() function, a brake() function, etc. 
 4.) Attributes - attributes are the properties or characteristics of a class. 
 - Ex: Inside of our Car() class, we could have a color attribute, a speed attribute, etc. 
+
 """
+
 
 """
 Python is one of the main programming languages that implements these OOP principles. Let's look at an example of 

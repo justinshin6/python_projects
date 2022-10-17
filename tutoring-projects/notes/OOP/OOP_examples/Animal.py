@@ -1,10 +1,11 @@
 class Animal:
 
     # the constructor of the animal class
-    def __init__(self, name, age):
+    def __init__(self, name, age, color):
 
         self.name = name
         self.age = age
+        self.color = color
 
     def getName(self):
         """
@@ -24,13 +25,19 @@ class Animal:
         else:
             self.age -= diff
 
+    def getColor(self):
+        return self.color
+
 
 # Creating Objects of a class
-animal1 = Animal("Jeff", 13)
-animal2 = Animal("Theodore", 17)
+animal1 = Animal("Jeff", 13, "green")
+animal2 = Animal("Theodore", 17, "purple")
 print(animal1.getAge())
 animal1.changeAge(5, True)
 print(animal1.getAge())
+print(animal1.getColor())
+
+
 
 """
 Notes for reflection: 
@@ -62,3 +69,7 @@ Classes Exercises:
 2c.) Change the name of animal3 from "Zyra" to a name of your choice
 2d.) Print out the new name of animal3
 """
+
+
+
+
