@@ -32,11 +32,12 @@ class Animal:
 # Creating Objects of a class
 animal1 = Animal("Jeff", 13, "green")
 animal2 = Animal("Theodore", 17, "purple")
-print(animal1.getAge())
-animal1.changeAge(5, True)
-print(animal1.getAge())
-print(animal1.getColor())
 
+"""
+If we create an object of a class, then we have access to all of the attributes and functions that are inside 
+of that class. 
+"""
+print(animal1.getAge())
 
 
 """

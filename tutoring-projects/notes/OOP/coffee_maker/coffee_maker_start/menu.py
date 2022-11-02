@@ -11,6 +11,7 @@ class MenuItem:
 
 
 class Menu:
+
     """Models the Menu with drinks."""
     def __init__(self):
         self.menu = [
