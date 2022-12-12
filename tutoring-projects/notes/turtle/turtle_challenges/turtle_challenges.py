@@ -14,3 +14,13 @@ by using Turtle and GUI's, we can output things onto the screen without having t
 Turtle Introduction: 
 - To start, we are going to go through some challenges in Python with Turtle to get used to using a GUI for the first time. 
 """
+
+import turtle
+t = turtle.Turtle()
+t.forward(105)
+t.left(135)
+t.forward(75)
+t.left(90)
+t.forward(75)
+
+turtle.mainloop()

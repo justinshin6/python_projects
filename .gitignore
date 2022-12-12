@@ -39,6 +39,6 @@ yarn-error.log*
 *.tsbuildinfo
 
 # tokens
-beautiful-soup-intro/billboard-spotify-data/token.txt
+beautiful-soup-intro/billboard-spotify-data/test/token.txt
 .idea
 __pycache__
