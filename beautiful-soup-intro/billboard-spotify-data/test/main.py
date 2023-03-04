@@ -8,7 +8,7 @@ import requests
 from decouple import config
 URL = "https://www.billboard.com/charts/hot-100/"
 
-date = input("Which date do you want to go for billboard hot 100? Type the date in YYYY-MM-DD format: ")
+date = input("Which year do you want to go for billboard hot 100? Type the date in YYYY-MM-DD format: ")
 
 response = requests.get(URL + date)
 soup = BeautifulSoup(response.text, 'html.parser')
