@@ -6,10 +6,27 @@ import random
 is_race_on = False
 screen = Screen()
 screen.setup(width=500, height=400)
-user_bet = screen.textinput(title="Make your bet", prompt="Which turtle will win the race? Enter a color: ")
+user_bet = screen.textinput(title="Make your bet", prompt="Who win the race? ")
 colors = ["red", "orange", "yellow", "green", "blue", "purple"]
 y_positions = [-70, -40, -10, 20, 50, 80]
 all_turtles = []
+for i in range(6):
+    t = Turtle(shape="turtle")
+    t.penup()
+    t.color(colors[i])
+    t.goto(x = -230, y = y_positions[i])
+    all_turtles.append(t)
+if user_bet:
+    is_race_on = True
+while is_race_on:
+    for i in range(6):
+        turtle = all_turtles[i]
+        if turtle.xcor() > 230:
+            is_race_on = False
+
+        turtle.forward(random.randint(0, 10))
+
+
 
 """
 Step 1: Make Six turtles
@@ -28,3 +45,4 @@ Step 3: Main while loop functionality
 - Check to see if the winning color is equal to the user bet by using turtle.pencolor()
 - Outside the while loop, call screen.exitonclick()
 """
+screen.exitonclick()
