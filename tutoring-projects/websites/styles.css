@@ -1,0 +1,50 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Sigmar&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap'); */
+* {
+    margin: 0;
+}
+
+.indexfile {
+    background-color: darksalmon;
+}
+
+.testfile {
+    background-color: rgb(192, 68, 230);
+}
+
+h1 {
+    text-align: center;
+    color: green;
+    font-size: 75px;
+}
+
+p {
+    color: blue;
+    text-align: center;
+}
+
+/*
+you can think of id's as a really really important class, that can only happen once 
+*/
+#class-one {
+    color: white;
+}
+
+.paragraph {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    padding: 20px;
+}
+
+.header-div {
+
+    background-color: cadetblue;
+}
+
+.paragraph-div {
+    background-color: deepskyblue;
+}
+
+.image-div {
+    background-color: aqua;
+}
