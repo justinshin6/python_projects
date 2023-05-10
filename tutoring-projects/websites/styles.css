@@ -48,3 +48,17 @@ you can think of id's as a really really important class, that can only happen o
 .image-div {
     background-color: aqua;
 }
+
+table {
+    text-align: center;
+    border: 1px solid black;
+    width: 75%;
+}
+
+tr {
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+}
