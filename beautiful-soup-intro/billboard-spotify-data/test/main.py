@@ -15,7 +15,7 @@ soup = BeautifulSoup(response.text, 'html.parser')
 
 # web scrape to find all of the song names from the top 100 
 song_names = soup.find_all(name="h3", id="title-of-a-story", class_="a-no-trucate")
-song_list = [song.getText().strip("\n\t") for song in song_names]
+song_list = [song.getText().strip("\n\t") for song in song_names] 
 year = date.split("-")[0]
 # environment variables 
 CLIENT_ID = config("CLIENT_ID")
