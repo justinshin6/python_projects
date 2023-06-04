@@ -6,7 +6,7 @@ def sigmoid_function(x):
 
 class RegularizedLogisticRegression(object):
     '''
-    Implement regularized logistic regression for binary classification.
+    Regularized logistic regression for binary classification.
 
     The weight vector w should be learned by minimizing the regularized loss
     \l(h, (x,y)) = log(1 + exp(-y <w, x>)) + \lambda \|w\|_2^2. In other words, the objective
@@ -14,18 +14,14 @@ class RegularizedLogisticRegression(object):
     plus Tikhonov regularization with a coefficient of \lambda.
     '''
     def __init__(self):
-        self.learningRate = 0.00001 # Feel free to play around with this if you'd like, though this value will do
-        self.num_epochs = 10000 # Feel free to play around with this if you'd like, though this value will do
-        self.batch_size = 15 # Feel free to play around with this if you'd like, though this value will do
+
+        # parameters
+        self.learningRate = 0.00001 
+        self.num_epochs = 10000 
+        self.batch_size = 15 
         self.weights = None
 
-        #####################################################################
-        #                                                                    #
-        #    MAKE SURE TO SET THIS TO THE OPTIMAL LAMBDA BEFORE SUBMITTING    #
-        #                                                                    #
-        #####################################################################
-
-        self.lmbda = 10 # tune this parameter
+        self.lmbda = 10 
 
     def train(self, X, Y):
         '''

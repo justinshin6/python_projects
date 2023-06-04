@@ -26,16 +26,12 @@ def main():
     RR.train(X_train, Y_train)
     print('Train Accuracy: ' + str(RR.accuracy(X_train, Y_train)))
     print('Validation Accuracy: ' + str(RR.accuracy(X_val, Y_val)))
-
-    #[TODO] Once implemented, uncomment the following lines of code and:
-    # 1. implement runTrainTestValSplit to get the training and validation errors of our 70-15-15
-    #    split to the original dataset
-    # 2. implement runKFold to generate errors of each lambda, where k = 3 in this assignment
-    # 3. call plotError to plot those errors with respect to lambdas
     
     lambda_list = [1000, 100, 10, 1, 0.1, 0.01, 0.001]
     train_errors, val_errors = RR.runTrainTestValSplit(lambda_list, X_train, Y_train, X_val, Y_val)
     k_fold_errors = RR.runKFold(lambda_list, X_train_val, Y_train_val, 3)
+
+    # print lambda, errors, and plot the error on the graph
     print(lambda_list)
     print(train_errors, val_errors, k_fold_errors)
     RR.plotError(lambda_list, train_errors, val_errors, k_fold_errors)
