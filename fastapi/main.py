@@ -1,6 +1,8 @@
+from lib2to3.pytree import Base
+from typing import Optional
 from fastapi import FastAPI
 from enum import Enum
-
+from pydantic import BaseModel
 # initiate app 
 app = FastAPI()
 
@@ -55,3 +57,34 @@ fake_items_db = [{"item_name": "Foo"}, {"item_name": "Bar"}, {"item_name": "Baz"
 @app.get("/items")
 async def list_items(skip: int = 0, limit: int = 10):
     return fake_items_db[skip: skip + limit]
+
+### REQUEST BODY 
+
+# from pydantic import BaseModel
+class Item(BaseModel):
+    name: str
+    description: Optional[str] = None
+    price: float
+    tax: Optional[float] = None
+
+# create item via post request 
+@app.post("/items")
+async def create_item(item: Item):
+    item_dict = item.dict()
+
+    if item.tax:
+        price_with_tax = item.price + item.tax
+        item_dict.update({"price_with_tax": price_with_tax})
+    return item_dict
+
+# create item with put request
+@app.put("/items/{item_id}")
+async def create_item_with_put(item_id: int, item: Item, q: Optional[str] = None):
+
+    # **item.dict() unpacks the dictionary and adds the key-value pairs into the result dictionary 
+    result = {"item_id": item_id, **item.dict()}
+
+    # check if there is a query, if so, then add to the final result 
+    if q:
+        result.update({"query": q})
+    return result
