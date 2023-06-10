@@ -1,6 +1,5 @@
-from lib2to3.pytree import Base
 from typing import Optional
-from fastapi import FastAPI
+from fastapi import FastAPI, Query, Path, Body
 from enum import Enum
 from pydantic import BaseModel
 # initiate app 
@@ -51,12 +50,12 @@ async def get_food(food_name: FoodEnum):
 		# it will be a dairy food
     return {"food_name": food_name, "message": "unlucky"}
 
-### QUERY PARAMETERS
+# ### QUERY PARAMETERS
 
-fake_items_db = [{"item_name": "Foo"}, {"item_name": "Bar"}, {"item_name": "Baz"}]
-@app.get("/items")
-async def list_items(skip: int = 0, limit: int = 10):
-    return fake_items_db[skip: skip + limit]
+# fake_items_db = [{"item_name": "Foo"}, {"item_name": "Bar"}, {"item_name": "Baz"}]
+# @app.get("/items")
+# async def list_items(skip: int = 0, limit: int = 10):
+#     return fake_items_db[skip: skip + limit]
 
 ### REQUEST BODY 
 
@@ -77,14 +76,41 @@ async def create_item(item: Item):
         item_dict.update({"price_with_tax": price_with_tax})
     return item_dict
 
-# create item with put request
-@app.put("/items/{item_id}")
-async def create_item_with_put(item_id: int, item: Item, q: Optional[str] = None):
+# # create item with put request
+# @app.put("/items/{item_id}")
+# async def create_item_with_put(item_id: int, item: Item, q: Optional[str] = None):
 
-    # **item.dict() unpacks the dictionary and adds the key-value pairs into the result dictionary 
-    result = {"item_id": item_id, **item.dict()}
+#     # **item.dict() unpacks the dictionary and adds the key-value pairs into the result dictionary 
+#     result = {"item_id": item_id, **item.dict()}
 
-    # check if there is a query, if so, then add to the final result 
+#     # check if there is a query, if so, then add to the final result 
+#     if q:
+#         result.update({"query": q})
+#     return result
+
+# QUERY AND STRING VALIDATION
+@app.get("/items")
+async def read_items(q: Optional[str] = Query(None, min_length=3, max_length=10)):
+    results = {
+        "items": [{"item_id": "Foo"}, {"item_id": "Bar"}]
+    }
     if q:
-        result.update({"query": q})
-    return result
+        results.update({"q": q})
+    return results
+
+### MULTIPLE PARAMETERS
+@app.put("/items/{item_id}")
+async def update_item(item_id : int = Path(..., title="The ID of the item to get", ge=0, le=150), 
+q: Optional[str] = None, item: 
+Optional[Item] = None,
+importance: int = Body(...)):
+    results = {"item_id" : item_id}
+    if q:
+        results.update({"q", q})
+    if item:
+        results.update({"item": item})
+    if importance:
+        results.update({"importance": importance})
+
+    return results
+
