@@ -5,7 +5,9 @@ from pydantic import BaseModel, Field, HttpUrl, EmailStr
 # initiate app
 app = FastAPI()
 
-
+@app.get("/")
+async def main():
+    return {"message": "this is the root route"}
 
 class UserBase(BaseModel):
     username: str
